@@ -56,4 +56,16 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    dependencies {
+        implementation(libs.retrofit2.retrofit)
+        implementation(libs.retrofit2.converter.moshi)
+
+        // Moshi для JSON-парсинга
+        implementation(libs.moshi.kotlin)
+        //ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
+
+        // Логирование HTTP-запросов
+        implementation(libs.logging.interceptor)
+    }
 }
